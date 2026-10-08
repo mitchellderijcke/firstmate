@@ -1,0 +1,4 @@
+turn rc=0
+result first byte: {
+parsed: error=0 cost=0.010145 conversation_cost=0.010145 input=3 cache_read=0 cache_write=5061 output=4 turns=1
+ (rc=0)
