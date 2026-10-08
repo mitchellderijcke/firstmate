@@ -1,0 +1,8 @@
+# tmux tmux 3.6a; probe label=fmtestprobe-76103 stands in for the default server (lives in /tmp/tmux-501/)
+started probe server in /tmp fallback dir
+$ TMUX_TMPDIR=/tmp/fml.aTLc9L (removed) tmux -L fmtestprobe-76103 has-session   # old addressing style
+=> reached the /tmp server: fallback CONFIRMED (root cause)
+$ tmux -S /tmp/fml.aTLc9L/tmux-501/fmtestprobe-76103 kill-server   # new explicit-socket style
+error connecting to /tmp/fml.aTLc9L/tmux-501/fmtestprobe-76103 (No such file or directory)
+exit=1
+=> /tmp probe server still alive after explicit-socket kill: SAFE

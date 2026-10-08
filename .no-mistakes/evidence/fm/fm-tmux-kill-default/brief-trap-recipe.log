@@ -1,0 +1,23 @@
++(eval):1> bin/fm-lab-home.sh create /tmp/fm-lab.H9Mgv7
++(eval):1> LAB_TMUX_DIR=+(eval):1> bin/fm-lab-home.sh tmux-dir /tmp/fm-lab.H9Mgv7
++(eval):1> LAB_TMUX_DIR=/tmp/fml.MR0Whl 
++(eval):1> env -u TMUX 'TMUX_TMPDIR=/tmp/fml.MR0Whl' tmux -f /dev/null new-session -d -s primary 'exec sleep 300'
++(eval):1> id -u
++(eval):1> ls /tmp/fml.MR0Whl/tmux-501/
+default
++(eval):1> cleanup
++cleanup:0> id -u
++cleanup:0> tmux -S /tmp/fml.MR0Whl/tmux-501/default kill-server
++cleanup:0> bin/fm-lab-home.sh teardown /tmp/fm-lab.H9Mgv7
++(eval):1> echo 'rc=0'
+rc=0
++(eval):1> ls -d /tmp/fml.MR0Whl
+ls: /tmp/fml.MR0Whl: No such file or directory
++(eval):1> cleanup
++cleanup:0> id -u
++cleanup:0> tmux -S /tmp/fml.MR0Whl/tmux-501/default kill-server
+error connecting to /tmp/fml.MR0Whl/tmux-501/default (No such file or directory)
++cleanup:0> bin/fm-lab-home.sh teardown /tmp/fm-lab.H9Mgv7
++(eval):1> echo 'second-cleanup rc=0'
+second-cleanup rc=0
++(eval):1> set +x

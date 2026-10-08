@@ -1,0 +1,29 @@
+--- check
+ok primary: claude pid 35015 in /private/tmp/fmlab.nm34657/home
+ok probe: the primary answered LABREADY-1acf9dba0615
+ok trust: /private/tmp/fmlab.nm34657/home is trusted in the Claude store
+ok host: skipped (empty fleet arms no supervision)
+ok watcher: skipped (empty fleet)
+ok treehouse: ~/.treehouse unchanged
+check_exit=0
+--- pane main
+ ▐▛███▛█   Claude Code v2.1.292
+▝▜██████▀  Sonnet 5.5 with medium effort · Claude Max
+ ▝▝   ▝▝   /private/tmp/fmlab.nm34657/home
+❯ Lab readiness probe from bin/fm-live-lab.sh. Run no tool or command for this message. Reply with only the word LABREADY, a hyphen, and then 1acf9dba0615, with no spaces.                                                 
+⏺ LABREADY-1acf9dba0615                                                                                                                                                                                                     
+✻ Cogitated for 3s · done 11:15 PM                                                                                                                                                                                          
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯                                                                                                                                                                                                                         
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ auto mode on (shift+tab to cycle) · ← for agents                                                                                                                                                         58345 tokens
+--- down
+stopped: lab tmux server and lab processes
+removed: 1 Claude project entries under /private/tmp/fmlab.nm34657
+removed: /private/tmp/fmlab.nm34657
+down_exit=0
+ls: /tmp/fml.KpCAwk: No such file or directory
+ls: /tmp/fmlab.nm34657: No such file or directory
+--- second down on a removed lab (dir gone)
+fm-live-lab: no lab at '/tmp/fmlab.nm34657'
+down2_exit=1
