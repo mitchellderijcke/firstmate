@@ -1,0 +1,20 @@
+== LIMA_HOME du before:  17G
+== task meta lane_vms line
+lane_vms=pg-it task-x1-api
+== VMs before (LIMA_HOME=/tmp/lh.9n6a)
+fm-task-x1 Stopped
+other Stopped
+pg-it Stopped
+task-x1 Stopped
+task-x1-api Stopped
+task-x1-it Stopped
+task-x10 Stopped
+== fm-teardown.sh task-x1  exit=0
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /private/var/folders/j1/m2ll9y7957b4zdfgzb3x_db00000gn/T/fm-teardown-tests.SpfTqw/lane-vm-live-scout/wt)
+Backlog: task-x1 just finished (this home keeps no markdown backlog at /private/var/folders/j1/m2ll9y7957b4zdfgzb3x_db00000gn/T/fm-teardown-tests.SpfTqw/lane-vm-live-scout/data/backlog.md). Update /private/var/folders/j1/m2ll9y7957b4zdfgzb3x_db00000gn/T/fm-teardown-tests.SpfTqw/lane-vm-live-scout/data/backlog.md - move task-x1 to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+== VMs after
+fm-task-x1 Stopped
+other Stopped
+task-x1-it Stopped
+task-x10 Stopped
+== LIMA_HOME du after: 9.9G

@@ -1,0 +1,3 @@
+== fm_lane_vm_cleanup with no limactl on PATH
+limactl: not on PATH
+exit=0

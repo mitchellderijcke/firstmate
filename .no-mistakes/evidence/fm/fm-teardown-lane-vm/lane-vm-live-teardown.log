@@ -1,0 +1,14 @@
+
+===== SCENARIO: landed-ship (kind=ship )
+$ fm-lane-vm-record.sh state/task-x1.meta pg-it ; ... task-x1-api ; ... pg-it (dup)
+meta lane_vms line: lane_vms=pg-it task-x1-api
+limactl resolved to: /opt/homebrew/bin/limactl
+--- before: limactl list (LIMA_HOME=/tmp/lima-lab.AZlP)
+fm-task-x1 Stopped
+other Stopped
+pg-it Stopped
+task-x1 Stopped
+task-x1-api Stopped
+task-x1-it Stopped
+task-x10 Stopped
+--- du: 280M

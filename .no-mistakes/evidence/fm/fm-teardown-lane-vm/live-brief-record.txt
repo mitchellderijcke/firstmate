@@ -1,0 +1,10 @@
+== ship brief rule:
+   Record every Lima VM you create, right after creating it, so cleanup deletes it: `'/Users/mitchell/.no-mistakes/worktrees/b92d2298a54a/01M5TB31EDA9AN7P7P8Q980DGN/bin/fm-lane-vm-record.sh' '$LAB/state/lvtest-ship.meta' <vm-name>`
+== ship meta after running the brief's command twice:
+kind=ship
+lane_vms=lvtest-ship-it pg-lvtest
+== scout brief rule:
+   Record every Lima VM you create, right after creating it, so cleanup deletes it: `'/Users/mitchell/.no-mistakes/worktrees/b92d2298a54a/01M5TB31EDA9AN7P7P8Q980DGN/bin/fm-lane-vm-record.sh' '$LAB/state/lvtest-scout.meta' <vm-name>`
+== scout meta after running the brief's command twice:
+kind=scout
+lane_vms=lvtest-scout-it pg-lvtest
