@@ -1,0 +1,22 @@
+$ cat fix-login.meta
+kind=ship
+mode=no-mistakes
+pr=https://github.com/example/repo/pull/7
+pr_head=0123456789abcdef0123456789abcdef01234567
+$ fm-lane-vm-record.sh fix-login.meta fix-login-it
+exit 0
+$ fm-lane-vm-record.sh fix-login.meta fix-login
+exit 0
+$ fm-lane-vm-record.sh fix-login.meta fix-login-it
+exit 0
+$ fm-lane-vm-record.sh fix-login.meta fix-login-flow-x
+exit 0
+$ fm-lane-vm-record.sh fix-login.meta pg-it
+error: Lima VM name pg-it must be fix-login or start with fix-login-
+exit 2
+$ cat fix-login.meta
+kind=ship
+mode=no-mistakes
+lane_vms=fix-login-it fix-login fix-login-flow-x
+pr=https://github.com/example/repo/pull/7
+pr_head=0123456789abcdef0123456789abcdef01234567

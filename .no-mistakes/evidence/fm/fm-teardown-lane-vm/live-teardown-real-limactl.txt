@@ -1,0 +1,35 @@
+=== landed ship teardown, opted-in home
+meta lane_vms: lane_vms=task-x1-api task-x1-it pg-it
+flag config/lane-vm-cleanup: present
+before: other pg-it task-x1 task-x1-api task-x1-it task-x10 
+fm-teardown.sh task-x1  -> exit 0
+stderr lane-vm lines:
+  warning: skipping recorded Lima VM pg-it; its name does not belong to task-x1
+after:  other pg-it task-x1 task-x10 
+on disk: other pg-it task-x1 task-x10 
+=== scout teardown, opted-in home
+meta lane_vms: lane_vms=task-x1-api task-x1-it pg-it
+flag config/lane-vm-cleanup: present
+before: other pg-it task-x1 task-x1-api task-x1-it task-x10 
+fm-teardown.sh task-x1  -> exit 0
+stderr lane-vm lines:
+  warning: skipping recorded Lima VM pg-it; its name does not belong to task-x1
+after:  other pg-it task-x1 task-x10 
+on disk: other pg-it task-x1 task-x10 
+=== forced teardown of unlanded work, opted-in home
+meta lane_vms: lane_vms=task-x1-api task-x1-it pg-it
+flag config/lane-vm-cleanup: present
+before: other pg-it task-x1 task-x1-api task-x1-it task-x10 
+fm-teardown.sh task-x1 --force -> exit 0
+stderr lane-vm lines:
+  warning: skipping recorded Lima VM pg-it; its name does not belong to task-x1
+after:  other pg-it task-x1 task-x10 
+on disk: other pg-it task-x1 task-x10 
+=== landed ship teardown, home without the flag
+meta lane_vms: lane_vms=task-x1-api task-x1-it pg-it
+flag config/lane-vm-cleanup: absent
+before: other pg-it task-x1 task-x1-api task-x1-it task-x10 
+fm-teardown.sh task-x1  -> exit 0
+stderr lane-vm lines:
+after:  other pg-it task-x1 task-x1-api task-x1-it task-x10 
+on disk: other pg-it task-x1 task-x1-api task-x1-it task-x10 
