@@ -1,0 +1,58 @@
+fm-brief ship exit 0
+--- ship brief, config/lane-vm-cleanup=off: rule 2 block ---
+2. Run `no-mistakes doctor`; if it reports the repo is not initialized here, run `no-mistakes init`.
+
+# Rules
+1. Never push to the default branch. Never merge a PR.
+2. Keep project edits inside this worktree; keep proof and scratch output outside it, under `/var/folders/j1/m2ll9y7957b4zdfgzb3x_db00000gn/T//fm-lab.9weHs8/data/lab-off-ship/` or a temporary directory.
+   Outside the worktree, write only that task material and the status and steering-inbox records authorized below.
+   Leave the worktree clean before reporting done.
+Lima mentions in whole brief: 0
+
+fm-brief scout exit 0
+--- scout brief, config/lane-vm-cleanup=off: rule 2 block ---
+2. Stay inside this worktree; the only files you may write outside it are the report and the status file below.
+Lima mentions in whole brief: 0
+
+fm-brief ship exit 0
+--- ship brief, config/lane-vm-cleanup=on: rule 2 block ---
+2. Run `no-mistakes doctor`; if it reports the repo is not initialized here, run `no-mistakes init`.
+
+# Rules
+1. Never push to the default branch. Never merge a PR.
+2. Keep project edits inside this worktree; keep proof and scratch output outside it, under `/var/folders/j1/m2ll9y7957b4zdfgzb3x_db00000gn/T//fm-lab.Geoanr/data/lab-on-ship/` or a temporary directory.
+   Outside the worktree, write only that task material and the status and steering-inbox records authorized below.
+   Leave the worktree clean before reporting done.
+   Name every Lima VM you create `lab-on-ship` or `lab-on-ship-<suffix>` and record it right after creating it, so cleanup deletes it: `'/Users/mitchell/.no-mistakes/worktrees/b92d2298a54a/01M5VQR7K6NJBZCJQ7JTHVQVXF/bin/fm-lane-vm-record.sh' '/var/folders/j1/m2ll9y7957b4zdfgzb3x_db00000gn/T//fm-lab.Geoanr/state/lab-on-ship.meta' <vm-name>`
+Lima mentions in whole brief: 1
+$ <record command copied from brief> lab-on-ship-it
+exit 0
+$ <record command copied from brief> other-task-it
+error: Lima VM name other-task-it must be lab-on-ship or start with lab-on-ship-
+exit 2
+meta now:
+  kind=ship
+  window=fm-lab-on-ship
+  lane_vms=lab-on-ship-it
+  pr=https://github.com/o/r/pull/1
+  pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+pr identity parse after record: ok
+
+fm-brief scout exit 0
+--- scout brief, config/lane-vm-cleanup=on: rule 2 block ---
+2. Stay inside this worktree; the only files you may write outside it are the report and the status file below.
+   Name every Lima VM you create `lab-on-scout` or `lab-on-scout-<suffix>` and record it right after creating it, so cleanup deletes it: `'/Users/mitchell/.no-mistakes/worktrees/b92d2298a54a/01M5VQR7K6NJBZCJQ7JTHVQVXF/bin/fm-lane-vm-record.sh' '/var/folders/j1/m2ll9y7957b4zdfgzb3x_db00000gn/T//fm-lab.Geoanr/state/lab-on-scout.meta' <vm-name>`
+Lima mentions in whole brief: 1
+$ <record command copied from brief> lab-on-scout-it
+exit 0
+$ <record command copied from brief> other-task-it
+error: Lima VM name other-task-it must be lab-on-scout or start with lab-on-scout-
+exit 2
+meta now:
+  kind=scout
+  window=fm-lab-on-scout
+  lane_vms=lab-on-scout-it
+  pr=https://github.com/o/r/pull/1
+  pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+pr identity parse after record: ok
+

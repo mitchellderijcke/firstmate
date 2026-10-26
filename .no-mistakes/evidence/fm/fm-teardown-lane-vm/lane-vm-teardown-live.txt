@@ -1,0 +1,41 @@
+=== live-ship (kind=ship, config/lane-vm-cleanup=on, args: ) ===
+$ fm-lane-vm-record.sh state/task-x1.meta task-x1-api ; ... task-x1-it ; ... task-x10-it (wrong owner)
+error: Lima VM name task-x10-it must be task-x1 or start with task-x1-
+  (exit 2)
+meta lane_vms line: lane_vms=task-x1-api task-x1-it pg-it
+before: fm-task-x1 pg-it task-x1 task-x1-api task-x1-it task-x10 task-x10-it   LIMA_HOME size:  17G
+teardown exit: 0
+  stderr: warning: skipping recorded Lima VM pg-it; its name does not belong to task-x1
+after:  fm-task-x1 pg-it task-x1 task-x10 task-x10-it   LIMA_HOME size:  12G
+
+=== live-scout (kind=scout, config/lane-vm-cleanup=on, args: ) ===
+$ fm-lane-vm-record.sh state/task-x1.meta task-x1-api ; ... task-x1-it ; ... task-x10-it (wrong owner)
+error: Lima VM name task-x10-it must be task-x1 or start with task-x1-
+  (exit 2)
+meta lane_vms line: lane_vms=task-x1-api task-x1-it pg-it
+before: fm-task-x1 pg-it task-x1 task-x1-api task-x1-it task-x10 task-x10-it   LIMA_HOME size:  17G
+teardown exit: 0
+  stderr: warning: skipping recorded Lima VM pg-it; its name does not belong to task-x1
+after:  fm-task-x1 pg-it task-x1 task-x10 task-x10-it   LIMA_HOME size:  12G
+
+=== live-force (kind=ship, config/lane-vm-cleanup=on, args: --force) ===
+$ fm-lane-vm-record.sh state/task-x1.meta task-x1-api ; ... task-x1-it ; ... task-x10-it (wrong owner)
+error: Lima VM name task-x10-it must be task-x1 or start with task-x1-
+  (exit 2)
+meta lane_vms line: lane_vms=task-x1-api task-x1-it pg-it
+before: fm-task-x1 pg-it task-x1 task-x1-api task-x1-it task-x10 task-x10-it   LIMA_HOME size:  17G
+teardown exit: 0
+  stderr: warning: skipping recorded Lima VM pg-it; its name does not belong to task-x1
+after:  fm-task-x1 pg-it task-x1 task-x10 task-x10-it   LIMA_HOME size:  12G
+
+=== live-off (kind=ship, config/lane-vm-cleanup=off, args: ) ===
+$ fm-lane-vm-record.sh state/task-x1.meta task-x1-api ; ... task-x1-it ; ... task-x10-it (wrong owner)
+error: Lima VM name task-x10-it must be task-x1 or start with task-x1-
+  (exit 2)
+meta lane_vms line: lane_vms=task-x1-api task-x1-it pg-it
+before: fm-task-x1 pg-it task-x1 task-x1-api task-x1-it task-x10 task-x10-it   LIMA_HOME size:  17G
+teardown exit: 0
+after:  fm-task-x1 pg-it task-x1 task-x1-api task-x1-it task-x10 task-x10-it   LIMA_HOME size:  17G
+
+=== limactl absent: opted-in ship teardown with no limactl on PATH ===
+teardown exit: 0; lima lines in stderr: 0
